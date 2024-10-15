@@ -6,3 +6,6 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app/src
 COPY requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
+
+# cat dwbank.sql | docker exec -i dwbank_db psql -U "mhmd" -d "postgres"
+# docker exec -t postgres-container pg_dump -U postgres -d mydb -F c -b -v

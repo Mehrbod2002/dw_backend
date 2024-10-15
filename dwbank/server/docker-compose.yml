@@ -30,10 +30,14 @@ services:
       - pg_data:/var/lib/postgresql/data/
     env_file:
       - ./src/.env
+    # environment:
+    #   POSTGRES_USER: "${SQL_USER}"
+    #   POSTGRES_PASSWORD: "${SQL_PASSWORD}"
+    #   POSTGRES_DB: "${SQL_DATABASE}"
     environment:
-      POSTGRES_USER: "${SQL_USER}"
-      POSTGRES_PASSWORD: "${SQL_PASSWORD}"
-      POSTGRES_DB: "${SQL_DATABASE}"
+      POSTGRES_USER: "mhmd"
+      POSTGRES_PASSWORD: "1234565mm"
+      POSTGRES_DB: "postgres"
 
   dwbank_nginx:
     container_name : dwbank_nginx
